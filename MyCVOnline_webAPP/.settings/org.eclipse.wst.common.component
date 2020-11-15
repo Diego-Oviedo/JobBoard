@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+                
+    
+    
+    <wb-module deploy-name="MyCVOnline_webAPP">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/Applicants"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/Companies"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/CSS"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/CSS/CSS_Pictures"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/WEB-INF/JavaScript"/>
+                                
+        
+        
+        <property name="context-root" value="MyCVOnline_webAPP"/>
+                                
+        
+        
+        <property name="java-output-path" value="/MyCVOnline_webAPP/build/classes"/>
+                            
+    
+    
+    </wb-module>
+            
+
+
+</project-modules>
