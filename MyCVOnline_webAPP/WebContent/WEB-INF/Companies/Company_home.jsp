@@ -29,7 +29,7 @@
 
     <div class="chip">
       <img src="PicturesController?action=company_logo&company_id=${company.companyID}"/>
-      ${applicant.firstName} ${applicant.lastName} | ${applicant.username}
+      ${company.companyID} | ${employee.fullName}
     </div>
   </div>
 
@@ -43,35 +43,29 @@
 				<div class="aside_box">
 					<h1>My profile</h1>
 
-					<label>Username:</label>
-					<c:out value="${employee.username}" />
+					<label>Username:</label> ${employee.username}
 
-					<br> <label>Password:</label> ******** <br> <label>Employee
-						name:</label>
-					<c:out value="${employee.fullName}" />
-
-					<br>
-					<br> <label>Company name:</label>
-					<c:out value="${company.companyName}" />
-
-					<br> <label>Phone number:</label>
-					<c:out value="${company.phoneNumber}" />
-
-					<br> <label>E-mail:</label>
-					<c:out value="${company.email}" />
+					<br> <label>Password:</label> ******** 
+					
+					<br> <label>Employee name:</label> ${employee.fullName}
 
 					<br>
-					<br> <label>City:</label>
-					<c:out value="${company.city}" />
+					
+					<br> <label>Company name:</label> ${company.companyName}
 
-					<br> <label>Postal code:</label>
-					<c:out value="${company.postalCode}" />
+					<br> <label>Phone number:</label> ${company.phoneNumber}
 
-					<br> <label>Province:</label>
-					<c:out value="${company.province}" />
+					<br> <label>E-mail:</label> ${company.email}
 
-					<br> <label>Country:</label>
-					<c:out value="${company.country}" />
+					<br>
+					
+					<br> <label>City:</label> ${company.city}
+
+					<br> <label>Postal code:</label> ${company.postalCode}
+
+					<br> <label>Province:</label> ${company.province}
+
+					<br> <label>Country:</label> ${company.country}
 
 					<br> <a class="button"
 						href="Company?action=my_profile_edit&company_id=${company.companyID}&username=${employee.username}">Edit</a>
