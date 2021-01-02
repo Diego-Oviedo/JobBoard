@@ -114,7 +114,7 @@
 							</table>
 
 						</div>
-						<div class="parent">
+						<div class="parent_drop-down">
 							<h3>Jobs posted</h3>
 							<br>
 							<table>
@@ -134,8 +134,7 @@
 											<td><c:out value="${position.jobTitle}" /></td>
 											<td><c:out value="${position.jobDomain}" /></td>
 											<td><c:out value="${position.typeOfJob}" /></td>
-											<td><a class="table_button"
-												href="Company?action=jobPost_view&position_id=${position.positionID}">See post </a></td>
+											<td><a class="table_button" href="Company?action=jobPost_view&position_id=${position.positionID}">See post </a></td>
 											<td><a class="table_button" href="Company?action=applications_per_post_view&position_id=${position.positionID}">Applicants applied</a></td>
 										</tr>
 									</c:forEach>
