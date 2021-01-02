@@ -33,7 +33,7 @@ public class CompanyController extends HttpServlet {
 	private static String COMPANY_JOB_POST_VIEW = "Company_job_post.jsp";
 	private static String COMPANY_JOBS_OFFERS_POSTED = "Company_jobs_posted.jsp";
 	private static String COMPANY_LOGIN = "Company_login.jsp";
-	private static String COMPANY_MY_PROFILE_VIEW = "Company_my_profile.jsp";
+	private static String COMPANY_HOME = "Company_home.jsp";
 	private static String COMPANY_MY_PROFILE_EDIT = "Company_my_profile_edit.jsp";
 
 	
@@ -85,7 +85,11 @@ public class CompanyController extends HttpServlet {
 				session.setAttribute("company_id",companyID_retreived);
 				
 				company_retreive_profile(request, response);
-				RequestDispatcher view = request.getRequestDispatcher(COMPANY_MY_PROFILE_VIEW);
+				company_retreive_employee(request,response);
+				company_retreive_jobPosition(request,response);
+				company_retreive_PositionExperiences(request,response);
+				company_retreive_PositionQualifications(request,response);
+				RequestDispatcher view = request.getRequestDispatcher(COMPANY_HOME);
 				view.forward(request, response);
 				
 			}else { //if the password is not correct 
@@ -278,7 +282,7 @@ public class CompanyController extends HttpServlet {
 			
 			company_retreive_profile(request,response);
 			company_retreive_employee(request,response);
-			RequestDispatcher view = request.getRequestDispatcher(COMPANY_MY_PROFILE_VIEW);
+			RequestDispatcher view = request.getRequestDispatcher(COMPANY_HOME);
 			view.forward(request, response);
 		}
 		
@@ -295,7 +299,7 @@ public class CompanyController extends HttpServlet {
 			company_update_profile(request,response);
 			company_retreive_profile(request,response);
 			company_retreive_employee(request,response);
-			RequestDispatcher view = request.getRequestDispatcher(COMPANY_MY_PROFILE_VIEW);
+			RequestDispatcher view = request.getRequestDispatcher(COMPANY_HOME);
 			view.forward(request, response);
 		}
 		
