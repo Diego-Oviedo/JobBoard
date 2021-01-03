@@ -71,7 +71,7 @@ body {
 .navbar a.active {
   background-color: #666;
   color: white;
-}
+} 
 
 /* Contact chip */
 .chip {

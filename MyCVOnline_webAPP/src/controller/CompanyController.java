@@ -40,7 +40,7 @@ public class CompanyController extends HttpServlet {
 	String action = " ";
 	
 	public CompanyController() throws ServletException, IOException, ClassNotFoundException {
-		super();
+		super(); 
 		company_dao = new CompanyImplementation();
 	}
 	
