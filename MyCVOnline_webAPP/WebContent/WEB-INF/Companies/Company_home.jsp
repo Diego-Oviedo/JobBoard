@@ -101,7 +101,7 @@
 							</table>
 						</div>
 						</c:forEach>
-						 
+						  
 						
 						<div class="parent_drop-down">
 							<h3>Job post - ${position.jobTitle}</h3>

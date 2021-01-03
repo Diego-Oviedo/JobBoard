@@ -36,7 +36,7 @@ public class CompanyController extends HttpServlet {
 	private static String COMPANY_HOME = "Company_home.jsp";
 	private static String COMPANY_MY_PROFILE_EDIT = "Company_my_profile_edit.jsp";
 
-	
+	 
 	String action = " ";
 	
 	public CompanyController() throws ServletException, IOException, ClassNotFoundException {
