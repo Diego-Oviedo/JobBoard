@@ -36,11 +36,11 @@ public class CompanyController extends HttpServlet {
 	private static String COMPANY_HOME = "Company_home.jsp";
 	private static String COMPANY_MY_PROFILE_EDIT = "Company_my_profile_edit.jsp";
 
-	
+	 
 	String action = " ";
 	
 	public CompanyController() throws ServletException, IOException, ClassNotFoundException {
-		super();
+		super(); 
 		company_dao = new CompanyImplementation();
 	}
 	
@@ -86,8 +86,8 @@ public class CompanyController extends HttpServlet {
 				
 				company_retreive_profile(request, response);
 				company_retreive_employee(request,response);
-				company_retreive_ApplicationsByCompany(request,response);
-				company_retreive_jobPosition(request,response);
+				company_retreive_jobPositions(request,response);
+				company_retreive_ApplicationsByPostID(request,response);
 				company_retreive_PositionExperiences(request,response);
 				company_retreive_PositionQualifications(request,response);
 				RequestDispatcher view = request.getRequestDispatcher(COMPANY_HOME);
@@ -380,7 +380,7 @@ public class CompanyController extends HttpServlet {
 		
 		request.setAttribute("company",company_dao.retreiveCompany(companyID));
 		request.setAttribute("employee",company_dao.retreiveEmployee(username));
-		
+		 
 	}
 	
 	public void company_update_profile (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
