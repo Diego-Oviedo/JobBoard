@@ -80,70 +80,54 @@
 
 				<div class="aside_box">
 
-
+					<c:forEach items="${positions}" var="position">
 					<div class="drop-down-wrapper">
+					
+						<c:forEach items="${applications}" var="application">					
 						<div class="content_inside_drop-down-wrapper">
-
-							<h1>Applicants</h1>
+							<h3>Applicant</h3>
 							<br>
-							<table>
-								<thead>
-									<th>APPLICATION ID</th>
-									<th>JOB TITLE</th>
-									<th>PROFESSION</th>
-									<th>CITY</th>
-									<th>PROVINCE</th>
-									<th>COUNTRY</th>
-									<th>NAME</th>
-									<th colspan="2">ACTION</th>
-								</thead>
-								<tbody>
-									<c:forEach items="${applications}" var="application">
-										<tr>
-											<td>${application.applicationNumber}</td>
-											<td>${application.position.jobTitle}</td>
-											<td>${application.applicant.profession}</td>
-											<td>${application.position.company.city}</td>
-											<td>${application.position.company.province}</td>
-											<td>${application.position.company.country} </td>
-											<td>${application.applicant.firstName} ${application.applicant.lastName} </td>
-											<td colspan="2"><a class="small_button" href="Company?action=applicant_profile_view&applicant_id=${application.applicant.applicantID}">See profile </a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
+							<table>	
+								<tr>
+									<td>${application.applicationNumber}</td>
+									<td>${application.position.jobTitle}</td>
+									<td>${application.applicant.profession}</td>
+									<td>${application.position.company.city}</td>
+									<td>${application.position.company.province}</td>
+									<td>${application.position.company.country} </td>
+									<td>${application.applicant.firstName} ${application.applicant.lastName} </td>
+									<td colspan="2"><a class="small_button" href="Company?action=applicant_profile_view&applicant_id=${application.applicant.applicantID}">See profile </a></td>
+								</tr>
 							</table>
-
 						</div>
+						</c:forEach>
+						
+						
 						<div class="parent_drop-down">
-							<h3>Jobs posted</h3>
+							<h3>Job post - ${position.jobTitle}</h3>
 							<br>
 							<table>
-								<thead>
-									<th>POSITION ID</th>
-									<th>JOB TITLE</th>
-									<th>DOMAIN</th>
-									<th>TYPE OF JOB</th>
-									<th></th>
-									<th></th>
-								</thead>
+								<tr>
+									<td>${position.jobTitle}</td>
+									<td>${position.typeOfJob}</td>
+								</tr>
+									
+								<tr>
+									<td>${position.positionID}</td>
+									<td>${position.jobDomain}</td>
+								</tr>
 								
-								<tbody>
-									<c:forEach items="${positions}" var="position">
-										<tr>
-											<td><c:out value="${position.positionID}" /></td>
-											<td><c:out value="${position.jobTitle}" /></td>
-											<td><c:out value="${position.jobDomain}" /></td>
-											<td><c:out value="${position.typeOfJob}" /></td>
-											<td><a class="table_button" href="Company?action=jobPost_view&position_id=${position.positionID}">See post </a></td>
-											<td><a class="table_button" href="Company?action=applications_per_post_view&position_id=${position.positionID}">Applicants applied</a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-								
+								<tr>
+									<td><a class="table_button" href="Company?action=jobPost_view&position_id=${position.positionID}">See post </a></td>
+									<td><a class="table_button" href="Company?action=applications_per_post_view&position_id=${position.positionID}">Applicants applied</a></td>
+								</tr>
 							</table>
 
 						</div>
+						
 					</div>
+					</c:forEach>
+					
 
 
 

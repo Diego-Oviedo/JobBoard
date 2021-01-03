@@ -381,13 +381,12 @@ hr {
 }
 
 .parent_drop-down {
-	height: 100%;
 	width: 100%;
 	display: block;
 	cursor: pointer;
 	line-height: 30px;
 	border-radius: 5px;
-	border: 1px solid #AAA;
+	border: .5px solid #AAA;
 	border-bottom: 1px solid #777;
 	color: #282D31;
 	font-weight: bold;
@@ -396,7 +395,7 @@ hr {
 	-webkit-transition: border-radius .1s linear, background .1s linear,
 		z-index 0s linear;
 	-webkit-transition-delay: .8s;
-	text-align: center;
+	text-align: left;
 }
 
 .parent_drop-down:hover, .content:hover ~ .parent_drop-down {
