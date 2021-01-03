@@ -111,7 +111,7 @@
 									<td>${position.jobTitle}</td>
 									<td>${position.typeOfJob}</td>
 								</tr>
-									
+									 
 								<tr>
 									<td>${position.positionID}</td>
 									<td>${position.jobDomain}</td>

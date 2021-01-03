@@ -380,7 +380,7 @@ public class CompanyController extends HttpServlet {
 		
 		request.setAttribute("company",company_dao.retreiveCompany(companyID));
 		request.setAttribute("employee",company_dao.retreiveEmployee(username));
-		
+		 
 	}
 	
 	public void company_update_profile (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

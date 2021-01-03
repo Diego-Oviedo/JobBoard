@@ -19,7 +19,7 @@
 					<li><a href="Company?action=applications_view&company_id=<c:out value="${company.companyID}"/>&username=<c:out value="${employee.username}"/>">Applications</a></li>
 					<li><a href="Company?action=my_profile&company_id=<c:out value="${company.companyID}"/>&username=<c:out value="${employee.username}"/>">My profile</a></li>	
 					<li><a href="Company?action=logout">Log out</a></li>
-				</ul>
+				</ul> 
 
 				<ul class="nav_greeting">
 					<li>Welcome </li>
