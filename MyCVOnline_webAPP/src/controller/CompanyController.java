@@ -86,7 +86,7 @@ public class CompanyController extends HttpServlet {
 				
 				company_retreive_profile(request, response);
 				company_retreive_employee(request,response);
-				company_retreive_jobPositions(request,response);
+				company_retreive_ApplicationsByCompany(request,response);
 				company_retreive_jobPosition(request,response);
 				company_retreive_PositionExperiences(request,response);
 				company_retreive_PositionQualifications(request,response);

@@ -374,9 +374,9 @@ hr {
 
 .drop-down-wrapper {
 	display: inline-block;
-	width: 180px;
+	width: 100%;
 	margin: 0 10px 0 0;
-	height: 20px;
+	height: 35px;
 	position: relative;
 }
 
@@ -418,7 +418,7 @@ hr {
 	display: block;
 	z-index: 1;
 	height: 0;
-	width: 180px;
+	width: 100%;
 	padding-top: 30px;
 	-webkit-transition: height .5s ease;
 	-webkit-transition-delay: .4s;

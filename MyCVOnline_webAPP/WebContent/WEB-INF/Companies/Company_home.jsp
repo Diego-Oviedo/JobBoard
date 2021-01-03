@@ -84,7 +84,7 @@
 					<div class="drop-down-wrapper">
 						<div class="content_inside_drop-down-wrapper">
 
-							<h1>Applicants</h1>
+							<h3>Applicants</h3>
 							<br>
 							<table>
 								<thead>
